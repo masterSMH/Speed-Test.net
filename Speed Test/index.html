@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="speed-test-container">            <div class="header">
+                <div class="theme-toggle">
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <h1>Speed Test</h1>
+                <p class="subtitle">Test your internet connection speed</p>
+            </div>
+            
+            <div class="speed-indicators">
+                <div class="speed-gauge download">
+                    <div class="gauge-label">Download</div>
+                    <div class="speed-value">0</div>
+                    <div class="unit">Mbps</div>
+                </div>
+                <div class="speed-gauge upload">
+                    <div class="gauge-label">Upload</div>
+                    <div class="speed-value">0</div>
+                    <div class="unit">Mbps</div>
+                </div>
+                <div class="speed-gauge ping">
+                    <div class="gauge-label">Ping</div>
+                    <div class="speed-value">0</div>
+                    <div class="unit">ms</div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="status">Ready to start</div>
+            </div>            <div class="control-buttons">
+                <button class="start-btn">
+                    <i class="fas fa-play"></i>
+                    <span>Start</span>
+                </button>
+                <button class="stop-btn" disabled>
+                    <i class="fas fa-pause"></i>
+                    <span>Stop</span>
+                </button>
+                <button class="restart-btn" disabled>
+                    <i class="fas fa-redo"></i>
+                    <span>Restart</span>
+                </button>
+            </div>            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <canvas id="speedChart"></canvas>
+                </div>
+            </div>
+
+            <div class="server-info">
+                <p>Server: <span class="server-location">Selecting best server...</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
